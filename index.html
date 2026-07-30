@@ -6,6 +6,7 @@
   <title>오케이문자</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap">
   <style>
     * {
       margin: 0;
@@ -879,15 +880,159 @@
 
     .site-footer {
       margin-top: 100px;
-      overflow: hidden;
+      width: 100%;
+      height: 290px;
+      background: #141b33;
+      font-family: "Nanum Gothic", sans-serif;
     }
 
-    .footer-image {
-      display: block;
-      width: auto;
-      height: auto;
-      max-width: none;
+    .footer-inner {
+      position: relative;
+      width: 1000px;
+      height: 100%;
       margin: 0 auto;
+    }
+
+    .footer-content {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .footer-company {
+      width: 600px;
+      padding-top: 34px;
+      flex: none;
+    }
+
+    .footer-company-heading {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-company-title {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 28px;
+    }
+
+    .footer-badge {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      height: 28px;
+      padding: 0 14px;
+      border: 1px solid rgb(255 255 255 / 12%);
+      border-radius: 14px;
+      background: rgb(255 255 255 / 8%);
+      color: #c7cdf0;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .footer-badge-icon {
+      display: block;
+      width: 16px;
+      height: 16px;
+      flex: none;
+    }
+
+    .footer-company-info {
+      margin-top: 20px;
+      color: #a1a8c5;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 23px;
+      letter-spacing: 0;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 22px;
+      margin-top: 17px;
+    }
+
+    .footer-links a {
+      color: #e2e5f5;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 18px;
+      text-decoration: none;
+    }
+
+    .footer-contact {
+      width: 300px;
+      margin-left: 100px;
+      padding-top: 38px;
+      color: #a1a8c5;
+      text-align: right;
+      flex: none;
+    }
+
+    .footer-contact-label {
+      color: #8f98b8;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 17px;
+      letter-spacing: .5px;
+    }
+
+    .footer-contact-phone {
+      display: block;
+      margin-top: 10px;
+      color: #fff;
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 38px;
+      letter-spacing: 0;
+      text-decoration: none;
+    }
+
+    .footer-contact-hours {
+      margin-top: 9px;
+      color: #a1a8c5;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 21px;
+    }
+
+    .footer-contact-channels {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 18px;
+      margin-top: 10px;
+      color: #a1a8c5;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 18px;
+      white-space: nowrap;
+    }
+
+    .footer-divider {
+      position: absolute;
+      top: 218px;
+      left: 0;
+      width: 1000px;
+      height: 1px;
+      background: rgb(255 255 255 / 10%);
+    }
+
+    .footer-copyright {
+      position: absolute;
+      top: 242px;
+      left: 0;
+      width: 1000px;
+      color: #737b9e;
+      font-size: 11px;
+      font-weight: 400;
+      line-height: 18px;
+      text-align: center;
     }
 
     .quick-menu {
@@ -1225,7 +1370,45 @@
   </main>
 
   <footer class="site-footer">
-    <img class="footer-image" src="images/푸터.png" alt="오케이문자 회사 및 고객센터 정보">
+    <div class="footer-inner">
+      <div class="footer-content">
+        <div class="footer-company">
+          <div class="footer-company-heading">
+            <strong class="footer-company-title">COMPANY</strong>
+            <span class="footer-badge">
+              <img class="footer-badge-icon" src="images/전송자격인증제.svg" alt="">
+              전송자격인증제
+            </span>
+          </div>
+          <p class="footer-company-info">
+            와이제이정보 주식회사&nbsp;&nbsp;&nbsp;대표 : 김영모<br>
+            사업자등록번호 : 409-86-05661&nbsp;&nbsp;&nbsp;통신판매업 : 2024-광주북구-1212<br>
+            광주광역시 북구 무등로202번길 1, 3층(신안동)
+          </p>
+          <nav class="footer-links" aria-label="약관 및 정책">
+            <a href="#">이용약관</a>
+            <a href="#">불법스팸방지안내</a>
+            <a href="#">개인정보처리방침</a>
+          </nav>
+        </div>
+
+        <div class="footer-contact">
+          <p class="footer-contact-label">CONTACT</p>
+          <a class="footer-contact-phone" href="tel:1551-3561">1551-3561</a>
+          <p class="footer-contact-hours">
+            9 am ~ 6 pm / 점심. 12pm ~ 1:30pm<br>
+            토요일, 일요일, 공휴일 휴무
+          </p>
+          <div class="footer-contact-channels">
+            <span>FAX. 02-6919-1457</span>
+            <span>MAIL. okmunja@okmunja.co.kr</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-divider" aria-hidden="true"></div>
+      <p class="footer-copyright">COPYRIGHT 2009 © OK문자 ALL RIGHTS RESERVED.</p>
+    </div>
   </footer>
 
   <script>
