@@ -225,7 +225,8 @@
       padding: 24px;
       border-radius: 22px;
       background: #fff;
-      box-shadow: 0 4px 4px 0 rgb(0 0 0 / 25%);
+      box-shadow: 0 6px 14px rgba(25, 30, 38, 0.14);
+      font-family: "Pretendard", sans-serif;
     }
 
     .login-card h2 {
@@ -352,6 +353,312 @@
       border: 1px solid #cfe0ff;
       background: #eef4ff;
       color: #2563eb;
+    }
+
+    .login-card.is-logged-in {
+      padding: 0;
+      overflow: hidden;
+      background: #4f7cff;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .login-card.is-logged-in .login-guest,
+    .login-card:not(.is-logged-in) .login-member {
+      display: none;
+    }
+
+    .login-member {
+      position: relative;
+      width: 290px;
+      height: 330px;
+      font-family: "Pretendard", sans-serif;
+    }
+
+    .login-member-panel {
+      position: absolute;
+      z-index: 1;
+      top: 82px;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      width: 290px;
+      height: 248px;
+      padding: 17px 24px 16px;
+      border-radius: 24px 24px 22px 22px;
+      background: #fff;
+      box-sizing: border-box;
+    }
+
+    .login-member-header {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      width: 290px;
+      height: 94px;
+      padding: 19px 24px 0;
+      background: transparent;
+      box-sizing: border-box;
+    }
+
+    .login-member-type {
+      color: rgb(255 255 255 / 78%);
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .login-member-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      width: 100%;
+      margin-top: 4px;
+      min-height: 26px;
+    }
+
+    .login-member-name {
+      max-width: 145px;
+      min-width: 0;
+      flex: 0 1 auto;
+      overflow: hidden;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .login-member-actions {
+      display: flex;
+      gap: 7px;
+      align-items: center;
+      flex: none;
+    }
+
+    .login-member-info,
+    .login-logout {
+      display: grid;
+      place-items: center;
+      height: 26px;
+      padding: 0 10px;
+      border-radius: 13px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1;
+      color: #fff;
+      text-decoration: none;
+      white-space: nowrap;
+      cursor: pointer;
+      box-sizing: border-box;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .login-member-info {
+      border: 0;
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    .login-logout {
+      border: 1px solid rgba(255, 255, 255, 0.65);
+      background: transparent;
+    }
+
+    .login-balance-guide {
+      display: inline-flex;
+      align-items: center;
+      align-self: flex-end;
+      height: 18px;
+      color: #3e73ff;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 18px;
+      letter-spacing: -0.01em;
+      text-decoration: none;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    .login-balance-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: 121px 121px;
+      grid-template-rows: 70px 70px;
+      width: 242px;
+      height: 140px;
+      margin-top: 9px;
+      overflow: hidden;
+      border-radius: 12px;
+      background: #f7f9fd;
+      box-sizing: border-box;
+    }
+
+    .login-balance-item {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      align-items: center;
+      justify-content: center;
+      width: 121px;
+      height: 70px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .login-balance-label {
+      color: #596579;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.2;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .login-balance-value {
+      display: inline-flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 2px;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .login-balance-num {
+      color: #3e73ff;
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .login-balance-unit {
+      color: #68758a;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .login-balance-hline,
+    .login-balance-vline {
+      position: absolute;
+      z-index: 0;
+      top: 50%;
+      left: 50%;
+      background: #e7ecf4;
+      pointer-events: none;
+    }
+
+    .login-balance-hline {
+      width: 218px;
+      height: 1px;
+      transform: translate(-50%, -50%);
+    }
+
+    .login-balance-vline {
+      width: 1px;
+      height: 116px;
+      transform: translate(-50%, -50%);
+    }
+
+    .login-security {
+      display: flex;
+      flex-direction: column;
+      width: 242px;
+      margin-top: 12px;
+      box-sizing: border-box;
+    }
+
+    .login-security::before {
+      content: "";
+      display: block;
+      width: 242px;
+      height: 1px;
+      flex: none;
+      margin-bottom: 12px;
+      background: #e7ecf4;
+    }
+
+    .login-security-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 30px;
+    }
+
+    .login-security-label {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      height: 30px;
+      color: #333a46;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1;
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+    }
+
+    .login-security-icon {
+      display: block;
+      width: 14px;
+      height: 14px;
+      flex: none;
+      color: #333a46;
+    }
+
+    .login-security-toggle {
+      display: flex;
+      align-items: center;
+      flex: none;
+      width: 104px;
+      height: 30px;
+      padding: 2px;
+      border-radius: 15px;
+      background: #eef1f6;
+      box-sizing: border-box;
+    }
+
+    .login-security-on,
+    .login-security-off {
+      display: grid;
+      place-items: center;
+      height: 26px;
+      border: 0;
+      border-radius: 13px;
+      background: transparent;
+      color: #727b8b;
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1;
+      cursor: pointer;
+      transition: background .2s ease, color .2s ease;
+    }
+
+    .login-security-on {
+      width: 45px;
+      background: #3e73ff;
+      color: #fff;
+    }
+
+    .login-security-off {
+      width: 55px;
+    }
+
+    .login-security.is-off .login-security-on {
+      background: transparent;
+      color: #727b8b;
+    }
+
+    .login-security.is-off .login-security-off {
+      background: #3e73ff;
+      color: #fff;
     }
 
     .slider-control {
@@ -965,6 +1272,12 @@
       text-decoration: none;
     }
 
+    .footer-links a:hover,
+    .footer-links a:focus-visible {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
     .footer-contact {
       width: 300px;
       margin-left: 100px;
@@ -1182,27 +1495,91 @@
       </div>
 
       <form class="login-card">
-        <h2>로그인</h2>
+        <div class="login-guest">
+          <h2>로그인</h2>
 
-        <div class="login-fields">
-          <input class="login-input" type="text" placeholder="아이디입력" aria-label="아이디">
-          <input class="login-input" type="password" placeholder="비밀번호 입력" aria-label="비밀번호">
+          <div class="login-fields">
+            <input class="login-input" name="userId" type="text" placeholder="아이디입력" aria-label="아이디" autocomplete="username">
+            <input class="login-input" name="userPassword" type="password" placeholder="비밀번호 입력" aria-label="비밀번호" autocomplete="current-password">
+          </div>
+
+          <div class="login-options">
+            <label class="save-id">
+              <input type="checkbox">
+              <span>아이디저장</span>
+            </label>
+            <a class="find-account" href="#">
+              <img src="images/idpw.svg" alt="">
+              <span>ID/PW 찾기</span>
+            </a>
+          </div>
+
+          <div class="login-actions">
+            <button class="login-action login-submit" type="submit">로그인</button>
+            <button class="login-action signup-button" type="button">회원가입</button>
+          </div>
         </div>
 
-        <div class="login-options">
-          <label class="save-id">
-            <input type="checkbox">
-            <span>아이디저장</span>
-          </label>
-          <a class="find-account" href="#">
-            <img src="images/idpw.svg" alt="">
-            <span>ID/PW 찾기</span>
-          </a>
-        </div>
+        <div class="login-member" aria-live="polite">
+          <div class="login-member-panel">
+            <a class="login-balance-guide" href="#">잔여건수 이용안내 ›</a>
+            <div class="login-balance-grid">
+              <span class="login-balance-hline" aria-hidden="true"></span>
+              <span class="login-balance-vline" aria-hidden="true"></span>
+              <div class="login-balance-item">
+                <span class="login-balance-label">단문</span>
+                <span class="login-balance-value">
+                  <span class="login-balance-num">999</span><span class="login-balance-unit">건</span>
+                </span>
+              </div>
+              <div class="login-balance-item">
+                <span class="login-balance-label">장문</span>
+                <span class="login-balance-value">
+                  <span class="login-balance-num">999</span><span class="login-balance-unit">건</span>
+                </span>
+              </div>
+              <div class="login-balance-item">
+                <span class="login-balance-label">사진</span>
+                <span class="login-balance-value">
+                  <span class="login-balance-num">999</span><span class="login-balance-unit">건</span>
+                </span>
+              </div>
+              <div class="login-balance-item">
+                <span class="login-balance-label">팩스</span>
+                <span class="login-balance-value">
+                  <span class="login-balance-num">999</span><span class="login-balance-unit">장</span>
+                </span>
+              </div>
+            </div>
 
-        <div class="login-actions">
-          <button class="login-action login-submit" type="submit">로그인</button>
-          <button class="login-action signup-button" type="button">회원가입</button>
+            <div class="login-security">
+              <div class="login-security-row">
+                <span class="login-security-label">
+                  <svg class="login-security-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.8"/>
+                    <path d="M8 11V8a4 4 0 0 1 8 0v3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    <circle cx="12" cy="16" r="1.2" fill="currentColor"/>
+                  </svg>
+                  보안로그인
+                </span>
+                <div class="login-security-toggle" role="group" aria-label="보안로그인 설정">
+                  <button class="login-security-on" type="button" aria-pressed="true">ON</button>
+                  <button class="login-security-off" type="button" aria-pressed="false">OFF 설정</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="login-member-header">
+            <p class="login-member-type">개인고객</p>
+            <div class="login-member-row">
+              <p class="login-member-name" title="홍길동 님">홍길동 님</p>
+              <div class="login-member-actions">
+                <a class="login-member-info" href="#">내정보</a>
+                <button class="login-logout" type="button">로그아웃</button>
+              </div>
+            </div>
+          </div>
         </div>
       </form>
 
@@ -1552,6 +1929,34 @@
       event.preventDefault();
       window.scrollTo({ top: 0, behavior: "smooth" });
     });
+
+    const loginCard = document.querySelector(".login-card");
+    const loginIdInput = loginCard.querySelector('input[name="userId"]');
+    const loginPasswordInput = loginCard.querySelector('input[name="userPassword"]');
+    const loginLogout = loginCard.querySelector(".login-logout");
+    const loginSecurity = loginCard.querySelector(".login-security");
+    const loginSecurityOn = loginCard.querySelector(".login-security-on");
+    const loginSecurityOff = loginCard.querySelector(".login-security-off");
+
+    loginCard.addEventListener("submit", (event) => {
+      event.preventDefault();
+      loginCard.classList.add("is-logged-in");
+    });
+
+    loginLogout.addEventListener("click", () => {
+      loginCard.classList.remove("is-logged-in");
+      loginPasswordInput.value = "";
+      loginIdInput.focus();
+    });
+
+    function setSecurityLogin(isOn) {
+      loginSecurity.classList.toggle("is-off", !isOn);
+      loginSecurityOn.setAttribute("aria-pressed", String(isOn));
+      loginSecurityOff.setAttribute("aria-pressed", String(!isOn));
+    }
+
+    loginSecurityOn.addEventListener("click", () => setSecurityLogin(true));
+    loginSecurityOff.addEventListener("click", () => setSecurityLogin(false));
   </script>
 </body>
 </html>
